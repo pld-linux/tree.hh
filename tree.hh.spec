@@ -1,4 +1,5 @@
 Summary:	Tree.hh - a STL-like generic container class for n-ary trees
+Summary(pl):	Tree.hh - uniwersalna klasa kontenerowa do obs³ugi drzew n-klasowych
 Name:		tree.hh
 Version:	1.90
 Release:	1
@@ -21,6 +22,11 @@ n-ary trees, templated over the data stored at the nodes. Various
 types of iterators are provided (post-order, pre-order, and others).
 Where possible the access methods are compatible with the STL or
 alternative algorithms are available.
+
+%description -l pl
+Biblioteka Tree.hh dla C++ udostêpnia uniwersaln± klasê kontenerow±
+dla drzew n-klasowych zbli¿on± w obs³udze do standardowych kontenerów
+biblioteki STL.
 
 %prep
 %setup -qcDT -n tree.hh
