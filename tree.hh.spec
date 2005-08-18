@@ -26,10 +26,11 @@ alternative algorithms are available.
 %description -l pl
 Biblioteka Tree.hh dla C++ udostêpnia uniwersaln± klasê kontenerow±
 dla drzew n-klasowych zbli¿on± w obs³udze do standardowych kontenerów
-biblioteki STL.
+biblioteki STL. Dostêpne s± ró¿ne rodzaje iteratorów (post-order,
+pre-order i inne).
 
 %prep
-%setup -qcDT -n tree.hh
+%setup -qcDT
 
 %build
 cp -f %{SOURCE2} .
