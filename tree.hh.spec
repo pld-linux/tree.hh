@@ -1,17 +1,13 @@
 Summary:	Tree.hh - a STL-like generic container class for n-ary trees
 Summary(pl):	Tree.hh - uniwersalna klasa kontenerowa do obs³ugi drzew n-klasowych
 Name:		tree.hh
-Version:	1.90
+Version:	2.03
 Release:	1
-License:	GPL v2+
+License:	GPL v2
 Group:		Development/Libraries
-Source0:	http://www.damtp.cam.ac.uk/user/kp229/tree/tree.hh
-# Source0-md5:	03039ae44f9738dfaf86422c21a1776d
-Source1:	http://www.damtp.cam.ac.uk/user/kp229/tree/tree_util.hh
-# Source1-md5:	abbe54395344b362023885e7cb37afbc
-Source2:	http://www.damtp.cam.ac.uk/user/kp229/tree/tree.pdf
-# Source2-md5:	3e98e874821814b02e666d5504dd01fb
-URL:		http://directory.fsf.org/libs/cpp/tree.hh.html
+Source0:	http://www.aei.mpg.de/~peekas/tree/tree-%{version}.tar.gz
+# Source0-md5:	8161aee803f35ba786ac74c6d9c186fb
+URL:		http://www.aei.mpg.de/~peekas/tree/
 Requires:	libstdc++-devel
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,17 +26,13 @@ biblioteki STL. Dostêpne s± ró¿ne rodzaje iteratorów (post-order,
 pre-order i inne).
 
 %prep
-%setup -qcDT
-
-%build
-cp -f %{SOURCE2} .
+%setup -q -n tree-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_includedir}
 
-install %{SOURCE0} $RPM_BUILD_ROOT%{_includedir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_includedir}
+install tree{,_util}.hh $RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
