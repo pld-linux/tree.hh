@@ -2,7 +2,7 @@ Summary:	Tree.hh - a STL-like generic container class for n-ary trees
 Summary(pl.UTF-8):	Tree.hh - uniwersalna klasa kontenerowa do obsługi drzew n-klasowych
 Name:		tree.hh
 Version:	2.51
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Libraries
 Source0:	http://www.aei.mpg.de/~peekas/tree/tree-%{version}.tar.gz
