@@ -1,12 +1,12 @@
 Summary:	Tree.hh - a STL-like generic container class for n-ary trees
 Summary(pl.UTF-8):	Tree.hh - uniwersalna klasa kontenerowa do obsługi drzew n-klasowych
 Name:		tree.hh
-Version:	2.62
+Version:	2.81
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		Development/Libraries
 Source0:	http://www.aei.mpg.de/~peekas/tree/tree-%{version}.tar.gz
-# Source0-md5:	817fce1e4fef436cfaee1b9760257dd1
+# Source0-md5:	77b5598fc24506e3b48cb1da9f1a8e26
 URL:		http://www.aei.mpg.de/~peekas/tree/
 Requires:	libstdc++-devel
 BuildArch:	noarch
@@ -32,12 +32,12 @@ pre-order i inne).
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_includedir}
 
-install tree{,_util}.hh $RPM_BUILD_ROOT%{_includedir}
+install src/tree{,_util}.hh $RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc tree.pdf
+%doc ChangeLog doc/*.html doc/*.css doc/*.png
 %{_includedir}/*.hh
